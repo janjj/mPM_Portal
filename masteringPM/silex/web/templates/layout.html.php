@@ -3,21 +3,40 @@ $title = $view["slots"]->get("title", "MyWebsite");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet"
-	href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-<script src="/jquery/dist/jquery.min.js"></script>
-<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1,
-                   maximum-scale=1, user-scalable=no" />
-<title> <?= $title ?> </title>
+<head>                   
+	<meta charset="UTF-8">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	
+	<!-- Latest compiled and minified JavaScript -->	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#272c34">
+	<script src="../js/jquery.min.js"></script>
+	<script>var Game = Game || {};</script>
+	<!--script src="js/teststuff.js"></script-->
+	<script src="../js/Game.question.js"></script>
+	<script src="../js/Game.static.js"></script>
+	<script src="../js/Game.static.isWinner.js"></script>
+	<script src="../js/Game.config.js"></script>
+	<script src="../js/Game.main.js"></script>
+	<script src="../js/Game.creator.js"></script>
+	<script src="../js/Game.player.js"></script>
+	<script src="../js/Game.ki.js"></script>
+	<script src="../js/game.js"></script>
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<link rel="stylesheet" href="../form.css">
+	<style id="css" class="forJavascriptOnly"></style>
+	<title> <?= $title ?> </title>
 </head>
-<body>
+<body id="body">
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/home">MyFirstWebsite</a>
+				<a class="navbar-brand" href="/">masteringPM</a>
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar">
 					<span class="sr-only">Toggle navigation</span> <span
@@ -27,15 +46,10 @@ $title = $view["slots"]->get("title", "MyWebsite");
 			</div>
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li <?= $title == "Home" ? "class=\"active\"" : "" ?>><a
-						href="/home"><span class="glyphicon glyphicon-home"
-							aria-hidden="true"></span> Home</a></li>
-					<li <?= $title == "Post" ? "class=\"active\"" : "" ?>><a href="/form"><span class="glyphicon glyphicon-hand-right"
-							aria-hidden="true"></span>Post</a></li>
-					<li <?= $title == "Blog" ? "class=\"active\"" : "" ?>><a href="/blogpost"><span class="glyphicon glyphicon-eye-open"
-							aria-hidden="true"></span>Blog</a></li>
-					<li <?= $title == "Login" ? "class=\"active\"" : "" ?>><a href="/login"><span class="glyphicon glyphicon-user"
-							aria-hidden="true"></span>Login</a></li>
+					<li <?= $title == "Game" ? "class=\"active\"" : "" ?>><a href="/game"><span class="glyphicon glyphicon-hand-right"
+							aria-hidden="true"></span>Game</a></li>
+					<li <?= $title == "Service" ? "class=\"active\"" : "" ?>><a href="/service"><span class="glyphicon glyphicon-eye-open"
+							aria-hidden="true"></span>Service</a></li>
 				</ul>
 			</div>
 		</div>
